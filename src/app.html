@@ -1,0 +1,13 @@
+<template>
+	<div class="app slds-p-around_x-large">
+
+		<!-- <c-child>
+		</c-child> -->
+		<div style="height:400px">
+			<lightning-datatable key-field="Id" data={recordsToDisplay} hide-checkbox-column="true" columns={columns}>
+			</lightning-datatable>
+		</div>
+		<c-paginator result={totalRecords} page-size-options={pageSizeOptions} show-total-count={showTotalCount}
+			show-page-selection={showPageSelection} onupdate={handleRecords}></c-paginator>
+	</div>
+</template>

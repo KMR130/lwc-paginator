@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/kmr130.lwc-l8l3shvf",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve s2lGdqgx9wQ76gscaMz6 --open"
+  }
+}

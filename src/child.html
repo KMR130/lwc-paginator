@@ -1,0 +1,87 @@
+<template>
+	<lightning-input type="date" label="Select date" value={defaultdate} onchange={handleWeekDate}></lightning-input>
+	<div class="slds-grid slds-gutters">
+		<div class="slds-col">
+			<span>
+			</span>
+		</div>
+		<div class="slds-col">
+			<span>
+			</span>
+		</div>
+		<div class="slds-col">
+			<span>
+			</span>
+		</div>
+		<template if:true={listofDates} for:each={listofDates} for:item="item">
+
+			<div class="slds-col" key={item}>
+				<span>
+				{item}
+			</span>
+			</div>
+		</template>
+
+
+
+	</div>
+
+	<template if:true={listofDates} for:each={rowData} for:item="row" for:index="index">
+		<div key={row.id} class="slds-grid slds-gutters">
+			<div class="slds-col" style="padding-top:1.5rem">
+				<span>
+            <lightning-button-icon icon-name="utility:delete"  data-index={index} alternative-text="Delete" onclick={handledeleterow}  class="slds-m-left_xx-small" title="Delete"></lightning-button-icon>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.projectvalue}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.task}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day1}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day2}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day3}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day4}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day5}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day6}></lightning-input>
+			</span>
+			</div>
+			<div class="slds-col">
+				<span>
+				<lightning-input label="first" value={row.day7}></lightning-input>
+			</span>
+			</div>
+		</div>
+	</template>
+	<div class="slds-p-around_small">
+		<lightning-button-icon icon-name="utility:add" alternative-text="Delete" onclick={handleaddrow} title="Add">
+		</lightning-button-icon>
+	</div>
+</template>
