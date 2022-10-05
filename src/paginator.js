@@ -20,10 +20,8 @@ export default class Paginator extends LightningElement {
         return this.pageNumber == this.totalPages;
     }
 
-    connectedCallback() {
-      
+    connectedCallback() {      
                 if (this.result != null) {
-                    console.log('RESULT--> ' + JSON.stringify(this.result));
                     this.records = this.result;
                     this.totalRecords = this.result.length; 
                     this.pageSize = this.pageSizeOptions[0]; 
